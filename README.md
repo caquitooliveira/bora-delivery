@@ -31,7 +31,7 @@ O projeto foi desenvolvido como parte do meu portfólio, com foco na aplicação
 * **Git e GitHub**
 
 ## 📸 Preview
-
+<img width="1217" height="3613" alt="Captura de tela_14-8-2026_164453_localhost" src="https://github.com/user-attachments/assets/968b1861-42a3-42aa-931d-15a56a2db01b" />
 
 
 
