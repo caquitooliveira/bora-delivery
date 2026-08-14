@@ -1,0 +1,361 @@
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 
+   HERO
+ */
+
+.home-hero {
+  width: 100%;
+  min-height: 520px;
+
+  background-color: #fff7ed;
+  background-image: url("../../assets/bora.png");
+  background-repeat: no-repeat;
+  background-position: center 15px;
+  background-size: cover;
+
+  box-sizing: border-box;
+}
+
+.home-hero-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 520px;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+}
+
+.home-hero-content {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.home-hero-button {
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #f97316;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.home-hero-button:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+}
+
+/* 
+   CATEGORIAS
+ */
+
+.home-categories {
+  width: 100%;
+  padding: 60px 24px;
+
+  background-color: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.home-categories-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.home-categories-header {
+  margin-bottom: 28px;
+}
+
+.home-categories-header h2 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.home-categories-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.home-categories-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  padding-bottom: 4px;
+
+  scrollbar-width: none;
+}
+
+.home-categories-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* 
+   RESTAURANTES
+ */
+
+.home-restaurants {
+  width: 100%;
+  padding: 60px 24px;
+
+  background-color: #f9fafb;
+
+  box-sizing: border-box;
+}
+
+.home-restaurants-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.home-restaurants-header {
+  margin-bottom: 28px;
+}
+
+.home-restaurants-header h2 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.home-restaurants-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.home-restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* 
+   ESTADO VAZIO
+ */
+
+.home-empty-state {
+  width: 100%;
+
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.home-empty-icon {
+  margin-bottom: 16px;
+
+  font-size: 48px;
+}
+
+.home-empty-state h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+
+  font-size: 20px;
+}
+
+.home-empty-state p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 
+   TABLET
+ */
+
+@media (max-width: 900px) {
+  .home-restaurants-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+   MOBILE
+ */
+
+@media (max-width: 768px) {
+  /* HERO */
+
+  .home-hero {
+    min-height: 480px;
+
+    background-position: center;
+    background-size: cover;
+  }
+
+  .home-hero-container {
+    min-height: 480px;
+
+    padding: 0 20px;
+  }
+
+  .home-hero-content {
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  /* CATEGORIAS */
+
+  .home-categories {
+    padding: 40px 16px;
+  }
+
+  .home-categories-header {
+    margin-bottom: 20px;
+  }
+
+  .home-categories-header h2 {
+    font-size: 23px;
+  }
+
+  .home-categories-header p {
+    font-size: 14px;
+  }
+
+  .home-categories-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+
+    overflow: visible;
+
+    padding-bottom: 0;
+  }
+
+  /* GARANTE QUE O CARD NÃO TENHA LARGURA FIXA */
+
+  .home-categories-list .category-card {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+  /* RESTAURANTES */
+
+  .home-restaurants {
+    padding: 40px 16px;
+  }
+
+  .home-restaurants-header {
+    margin-bottom: 20px;
+  }
+
+  .home-restaurants-header h2 {
+    font-size: 23px;
+  }
+
+  .home-restaurants-header p {
+    font-size: 14px;
+  }
+
+  .home-restaurants-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+}
+
+/* 
+   MOBILE PEQUENO
+ */
+
+@media (max-width: 600px) {
+  .home-hero {
+    min-height: 420px;
+  }
+
+  .home-hero-container {
+    min-height: 420px;
+
+    padding: 0 16px;
+  }
+
+  .home-hero-content {
+    padding-bottom: 30px;
+  }
+
+  .home-hero-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .home-restaurants-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
+   MOBILE MUITO PEQUENO
+ */
+
+@media (max-width: 380px) {
+  .home-categories-list {
+    gap: 8px;
+  }
+
+  .home-categories-list .category-card {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

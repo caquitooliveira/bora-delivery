@@ -1,0 +1,317 @@
+
+.cart-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+
+.cart-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-modal-header h2 {
+  margin: 0 0 4px;
+
+  color: #111827;
+
+  font-size: 20px;
+}
+
+.cart-modal-header span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.cart-modal-close {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #f3f4f6;
+
+  color: #374151;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.cart-modal-close:hover {
+  background-color: #e5e7eb;
+}
+
+/* Vazio */
+
+.cart-modal-empty {
+  padding: 60px 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.cart-modal-empty span {
+  margin-bottom: 16px;
+
+  font-size: 50px;
+}
+
+.cart-modal-empty h3 {
+  margin: 0 0 8px;
+
+  color: #111827;
+}
+
+.cart-modal-empty p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* Produtos */
+
+.cart-modal-items {
+  padding: 20px 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  overflow-y: auto;
+}
+
+.cart-modal-item {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.cart-modal-item img {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+.cart-modal-item-info {
+  flex: 1;
+}
+
+.cart-modal-item-info h3 {
+  margin: 0 0 4px;
+
+  color: #111827;
+
+  font-size: 15px;
+}
+
+.cart-modal-item-info > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #447fff;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Quantidade */
+
+.cart-modal-quantity {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.cart-modal-quantity button {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+}
+
+.cart-modal-quantity button:hover {
+  border-color: #447fff;
+
+  color: #447fff;
+}
+
+.cart-modal-quantity strong {
+  min-width: 18px;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+.cart-modal-item-total {
+  color: #111827;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+/* Footer */
+
+.cart-modal-footer {
+  padding: 20px 24px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.cart-modal-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+
+  color: #111827;
+
+  font-size: 18px;
+}
+
+.cart-modal-total strong {
+  color: #447fff;
+
+  font-size: 20px;
+}
+
+.cart-modal-checkout {
+  width: 100%;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #447fff;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cart-modal-checkout:hover {
+  background-color: #3169d6;
+}
+
+.cart-modal-clear {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ef4444;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .cart-modal-overlay {
+    padding: 12px;
+  }
+
+  .cart-modal {
+    max-height: 90vh;
+  }
+
+  .cart-modal-header {
+    padding: 16px;
+  }
+
+  .cart-modal-items {
+    padding: 16px;
+  }
+
+  .cart-modal-footer {
+    padding: 16px;
+  }
+
+  .cart-modal-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-modal-item-total {
+    display: none;
+  }
+}
+

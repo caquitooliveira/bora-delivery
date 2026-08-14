@@ -1,0 +1,188 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  box-sizing: border-box;
+}
+
+.header-logo {
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 160px;
+}
+
+.header-location div {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-location span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.header-location strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.header-search {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-search input {
+  width: 100%;
+  padding: 12px 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 14px;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.header-search input:focus {
+  border-color: #f97316;
+}
+
+.header-cart {
+  position: relative;
+
+  flex-shrink: 0;
+
+  border: none;
+  background: transparent;
+
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.header-cart span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f97316;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .header-container {
+    gap: 16px;
+    padding: 14px 20px;
+  }
+
+  .header-location {
+    min-width: auto;
+  }
+
+  .header-location strong {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 14px 16px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo cart"
+      "location location"
+      "search search";
+
+    gap: 12px;
+  }
+
+  .header-logo {
+    grid-area: logo;
+    font-size: 21px;
+  }
+
+  .header-location {
+    grid-area: location;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .header-search {
+    grid-area: search;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .header-cart {
+    grid-area: cart;
+  }
+}
+
+/* =========================
+   MOBILE PEQUENO
+========================= */
+
+@media (max-width: 400px) {
+  .header-container {
+    padding: 12px;
+  }
+
+  .header-logo {
+    font-size: 19px;
+  }
+
+  .header-location strong {
+    font-size: 12px;
+  }
+
+  .header-search input {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+}
